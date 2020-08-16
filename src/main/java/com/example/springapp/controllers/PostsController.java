@@ -15,7 +15,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("api/posts")
-@Api(value = "Posts resources", description = "Crud operations")
+@Api(description = "Crud operations")
 public class PostsController
 {
     @Autowired
@@ -32,7 +32,7 @@ public class PostsController
     }
 
     @GetMapping("/{id}")
-    @ApiOperation(value = "Return post by id", response = Post.class)
+    @ApiOperation(value = "Return post by id")
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Post returned successfully"),
             @ApiResponse(code = 404, message = "Invalid post id")
